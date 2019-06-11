@@ -10,7 +10,7 @@ app.use(express.static(__dirname + "/public")); //use static files in ROOT/publi
 const base_url='https://wolfesneck.farmos.net/farm/sensor/listener/'
 
 // test url to use:
-//'http://localhost:1337/?public_key=834c74e03901cd1702c0a3060803f767&private_key=bfe468dc77b5530d65319b67cc39cdbc&temp=14.3&moisture=23.3'
+//'http://localhost:1337/?public_key=[PUBLIC_KEY]&private_key=[PRIVATE_KEY]&temp=14.3&moisture=23.3'
 
 
 app.get("/", function(req, response){ //root dir
