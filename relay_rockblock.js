@@ -10,11 +10,7 @@ app.use(express.static(__dirname + "/public")); //use static files in ROOT/publi
 
 app.use(bodyParser.json())
 
-const send_url='https://wolfesneck.farmos.net/farm/sensor/listener/834c74e03901cd1702c0a3060803f767?private_key=bfe468dc77b5530d65319b67cc39cdbc&temp=4.2&moisture=5.2'
-
-// test url to use:
-//'http://localhost:1337/?public_key=834c74e03901cd1702c0a3060803f767&private_key=bfe468dc77b5530d65319b67cc39cdbc&temp=14.3&moisture=23.3'
-
+const send_url='https://wolfesneck.farmos.net/farm/sensor/listener/[PUBLIC_KEY]?private_key=[PRIVATE_KEY]=4.2&moisture=5.2'
 
 app.post("/", function(req,response){
 	response.status(200).send(req.body);
