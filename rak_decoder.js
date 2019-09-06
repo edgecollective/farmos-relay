@@ -39,6 +39,15 @@ app.post("/", function(req,response){
     var myvar = "0x09,0x92,0x00";
     console.log(decoder.temperature(bytes.slice(x,x+2)))
 
+
+    var tempBytes = new Buffer([0x09,0x92,0xe4,0x0c])
+
+//console.log(decoder.temperature(tempBytes.slice(0,0+2)))
+
+console.log(decoder.decode(tempBytes,[decoder.temperature,decoder.humidity],['temp','humidiy']));
+
+
+
 	//var myvar = String('hello');
 
 	console.log(myvar);
